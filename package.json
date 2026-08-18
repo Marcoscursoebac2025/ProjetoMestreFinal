@@ -1,0 +1,18 @@
+{
+  "name": "projetomestrefinal",
+  "version": "1.0.0",
+  "description": "Projeto mestre final para o hub de leitura do  curso ebac",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^15.19.0"
+  },
+  "devDependencies": {
+    "chai": "^6.2.2"
+  }
+}
