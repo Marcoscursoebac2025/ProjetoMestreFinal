@@ -19,7 +19,6 @@ describe('Funcionalidade: adicionar item', () => {
   it('deve clicar no terceiro botao adicionar a cesta', () => {
     cy.get('.btn-primary').eq(2).click()
     cy.get('#global-alert-container').should('contain', 'A Divina Comédia')
-
   });
 
   it('deve clicar no ultimo botao adicionar a cestar ', () => {
