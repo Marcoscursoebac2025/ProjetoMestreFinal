@@ -3,6 +3,7 @@
 beforeEach(() => {
   cy.visit('catalog.html')
 
+
 });
 
 afterEach(() => {
