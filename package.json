@@ -4,8 +4,10 @@
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "serve": "npm start .",
+  "test": "cypress run"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
