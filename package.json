@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
-  
   "scripts": {
     "build": "vite build",
     "start": "http-server ./public -p 3000",
     "test:e2e": "cypress run"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +18,7 @@
     "chai": "^6.2.2",
     "http-server": "^14.1.1",
     "start-server-and-test": "^3.0.12",
+    "vite": "^8.2.2",
     "wait-on": "^9.1.0"
-}
+  }
 }
