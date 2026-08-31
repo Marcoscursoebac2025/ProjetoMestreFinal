@@ -4,8 +4,8 @@
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
   "scripts": {
-  "serve": "npm start .",
-  "test": "cypress run"
+ "start": "http-server ./public -p 3000",
+  "test:e2e": "start-server-and-test start http://localhost:3000 npx cypress run"
   },
 
   "keywords": [],
