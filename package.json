@@ -5,6 +5,7 @@
   "main": "index.js",
   
   "scripts": {
+    "build": "vite build",
     "start": "http-server ./public -p 3000",
     "test:e2e": "cypress run"
   },
