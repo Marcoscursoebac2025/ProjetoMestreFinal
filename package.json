@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
+  
   "scripts": {
- "start": "http-server ./public -p 3000",
-  "test:e2e": "start-server-and-test start http://localhost:3000 npx cypress run"
+    "start": "http-server ./public -p 3000",
+    "test:e2e": "cypress run"
   },
 
   "keywords": [],
@@ -15,6 +16,9 @@
     "cypress": "^15.19.0"
   },
   "devDependencies": {
-    "chai": "^6.2.2"}
-    
+    "chai": "^6.2.2",
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^3.0.12",
+    "wait-on": "^9.1.0"
+}
 }
