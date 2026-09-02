@@ -26,7 +26,6 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm start &
-    - run: npx wait-on tcp:3000
     - run: npx cypress open
     
 
