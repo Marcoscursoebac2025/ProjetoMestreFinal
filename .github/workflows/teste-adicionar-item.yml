@@ -26,7 +26,7 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm start &
-    - run: npx wait-on http://127.0.0.1:3000 --timeout 60000
+    - run: npx wait-on http://0.0.0.0:3000
     - run: npx cypress open
     
 
