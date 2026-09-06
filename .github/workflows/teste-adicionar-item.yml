@@ -25,7 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install --save-dev start-server-and-test
-    - run: npx start-server-and-test "npm start" http://127.0.0.1:3000 "npx cypress run" --timeout 10000
+    - run: npx start-server-and-test "npm start" http://localhost:3000 "npx cypress run" --timeout 10000
 
 
     
