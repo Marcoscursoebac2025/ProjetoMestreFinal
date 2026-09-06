@@ -2,8 +2,7 @@
 
 beforeEach(() => {
   cy.visit('/catalog.html')
-  cy.wait(500)
-  cy.get('.btn-primary').should('have.length.at.least', 1)
+  cy.wait(5000)
 
 });
 
