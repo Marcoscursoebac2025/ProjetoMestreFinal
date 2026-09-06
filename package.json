@@ -4,9 +4,8 @@
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
   "scripts": {
-    "build": "vite build",
-    "start": "http-server ./public -p 3000",
-    "test:e2e": "cypress run"
+    "start": "http-server ./public -p 3000 -e html",
+    "test:e2e": "start-server-and-test 'npm start' http://127.0.0.1:3000 'npx cypress run'"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +17,6 @@
     "chai": "^6.2.2",
     "http-server": "^14.1.1",
     "start-server-and-test": "^3.0.12",
-    "vite": "^8.2.2",
     "wait-on": "^9.1.0"
   }
 }
