@@ -2,7 +2,8 @@
 
 beforeEach(() => {
   cy.visit('/catalog.html')
-  cy.wait(5000)
+  cy.get('seletor-do-elemento', { timeout: 10000 })
+  .should('be.visible')
 
 });
 
