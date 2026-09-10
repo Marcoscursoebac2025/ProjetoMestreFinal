@@ -1,9 +1,16 @@
 ///<reference types="cypress"/>
 
 beforeEach(() => {
+  cy.intercept('GET', '**/api/books*').as('carregarLivros')
+
   cy.visit('/catalog.html')
-  cy.get('seletor-do-elemento', { timeout: 10000 })
-  .should('be.visible')
+
+  cy.wait('@carregarLivros')
+
+  cy.get('#catalogo')
+    .find('div')
+    .should('have.length.greaterThan', 0)
+    .and('be.visible')
 
 });
 
