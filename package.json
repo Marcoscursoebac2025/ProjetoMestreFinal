@@ -4,9 +4,9 @@
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ./public -p 3000 --silent --proxy http://localhost:3000",
+    "start": "http-server ./public -p 3000 --silent",
     "cy:run": "npx cypress run",
-    "test:e2e": "start-server-and-test 'npm start' http://localhost:3000 cy:run"
+    "test:e2e": "start-server-and-test 'npm start' http://localhost:3000/index.html cy:run"
   },
   "keywords": [],
   "author": "",
