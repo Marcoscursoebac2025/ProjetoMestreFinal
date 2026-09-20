@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server ./public -p 3000 --verbose --cache -1",
      "cy:run": "npx cypress run",
-    "test:e2e": "start-server-and-test 'npm start' http://localhost:3000/index.html cy:run"
+    "test:e2e": "start-server-and-test 'npm start' http://127.0.0.1:3000/index.html cy:run"
   },
   "keywords": [],
   "author": "",
