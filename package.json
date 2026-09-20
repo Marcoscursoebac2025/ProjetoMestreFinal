@@ -4,7 +4,7 @@
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ./dist -p 3000 --silent",
+    "start": "http-server ./public -p 3000 --silent --proxy http://localhost:3000",
     "cy:run": "npx cypress run",
     "test:e2e": "start-server-and-test 'npm start' http://localhost:3000 cy:run"
   },
