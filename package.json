@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server ./public -p 3000 --silent",
-    "test:e2e": "start-server-and-test 'npm run start' http://localhost:3000 cy:run",
-     "cy:run": "cypress run"
+    "cy:run": "cypress run && kill $(lsof -t -i:3000) || true",
+    "test:e2e": "start-server-and-test 'npm run start' http://localhost:3000 cy:run"
   },
   "keywords": [],
   "author": "",
