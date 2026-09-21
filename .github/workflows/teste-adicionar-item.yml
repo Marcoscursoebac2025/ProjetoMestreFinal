@@ -22,8 +22,10 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Ejecutar pruebas E2E
-        run: npm run test:e2e
+      - name: iniciar servidor
+        run: npm start
+      - name: ejecutar teste
+        run: npx cypress run
 
     
 
