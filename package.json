@@ -4,7 +4,7 @@
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ./public -p 3000 --silent --cache -1",
+    "start": "http-server ./public -p 3000 --cache -1",
      "cy:run": "cypress run",
     "test:e2e": "start-server-and-test start http://localhost:3000 cy:run"
   },
