@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server ./public -p 3000 --silent --cache 0",
      "cy:run": "cypress run",
-    "test:e2e": "start-server-and-test 'start' http://localhost:3000/index.html:200,304 cy:run"
+    "test:e2e": "start-server-and-test start http://localhost:3000/index.html cy:run"
   },
   "keywords": [],
   "author": "",
