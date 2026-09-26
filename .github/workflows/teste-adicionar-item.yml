@@ -13,7 +13,8 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v3
-
+      - name: List repo structure
+       -run: ls -R
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
