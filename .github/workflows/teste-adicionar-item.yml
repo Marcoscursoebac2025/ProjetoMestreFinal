@@ -18,13 +18,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
-      - name: Instalar dependencias
-        run: npm ci
-
-      - name: Executar testes E2E
-        run: npm run test:e2e
-
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:e2e
     
 
 
