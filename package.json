@@ -4,8 +4,7 @@
   "description": "Projeto mestre final para o hub de leitura do  curso ebac",
   "main": "index.js",
   "scripts": {
-  "build": "mkdir -p dist && cp -r public/* dist/",
-  "start": "http-server ./dist -a 127.0.0.1 -p 3000 -c-1",
+  "start": "node server.js",
   "cy:run": "cypress run --browser chrome",
   "test:e2e": "start-server-and-test start http://127.0.0.1:3000 cy:run"
   },
