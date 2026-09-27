@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout principal + submódulos
+      - name: Checkout principal
         uses: actions/checkout@v3
-        with:
-          submodules: true 
+      - name: Clonar hub-de-leitura-integrado
+        run: |
+          git clone https://github.com/fabioaraujoqa/hub-de-leitura.git
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
