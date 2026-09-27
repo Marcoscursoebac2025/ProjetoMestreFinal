@@ -3,5 +3,5 @@ const app = require(path.resolve(__dirname, "../../hub-de-leitura-integrado/src/
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log(`🚀 Servidor levantado en http://localhost:${3000}`);
+  console.log(`🚀 Servidor levantado en http://localhost:${port}`);
 });
