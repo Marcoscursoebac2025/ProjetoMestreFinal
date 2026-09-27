@@ -13,14 +13,14 @@ jobs:
     steps:
       - name: Checkout principal
         uses: actions/checkout@v3
-      - name: Clonar hub-de-leitura-integrado
-        run: |
-          git clone https://github.com/fabioaraujoqa/hub-de-leitura.git
+      
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.18.0'
+          
       - run: npm ci
+      
       - run: npm run test:e2e
     
 
