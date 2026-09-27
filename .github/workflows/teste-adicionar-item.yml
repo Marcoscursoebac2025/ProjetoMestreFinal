@@ -9,19 +9,26 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout principal
+      - name: Checkout ProjetoMestreFinal
         uses: actions/checkout@v3
-      
+
+      - name: Clonar hub-de-leitura como hub-de-leitura-integrado
+        run: |
+          cd ..
+          git clone https://github.com/fabioaraujoqa/hub-de-leitura.git hub-de-leitura-integrado
+          ls -R hub-de-leitura-integrado
+
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.18.0'
-          
-      - run: npm ci
-      
-      - run: npm run test:e2e
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Rodar testes E2E
+        run: npm run test:e2e
     
 
 
