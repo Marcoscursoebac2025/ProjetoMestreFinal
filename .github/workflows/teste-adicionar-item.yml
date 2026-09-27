@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
+      - name: Checkout principal + submódulos
         uses: actions/checkout@v3
-      - name: List repo structure
-       -run: ls -R
+        with:
+          submodules: true 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
