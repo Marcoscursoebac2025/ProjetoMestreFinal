@@ -11,11 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout do ProjetoMestreFinal (este repo)
+      # Checkout do repo de testes (este)
       - name: Checkout ProjetoMestreFinal
         uses: actions/checkout@v3
+        with:
+          path: ProjetoMestreFinal
 
-      # Checkout do hub-de-leitura-integrado (repo separado)
+      # Checkout do repo do servidor (otro repo)
       - name: Checkout hub-de-leitura-integrado
         uses: actions/checkout@v3
         with:
@@ -27,11 +29,11 @@ jobs:
         with:
           node-version: '18.18.0'
 
-      - name: Instalar dependências do hub-de-leitura-integrado
+      - name: Instalar dependências do servidor
         run: npm ci
         working-directory: hub-de-leitura-integrado
 
-      - name: Instalar dependências do ProjetoMestreFinal
+      - name: Instalar dependências das provas
         run: npm ci
         working-directory: ProjetoMestreFinal
 
@@ -46,6 +48,7 @@ jobs:
         working-directory: ProjetoMestreFinal
         env:
           PORT: 3001
+
 
     
   
