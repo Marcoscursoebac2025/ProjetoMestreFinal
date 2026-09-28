@@ -47,7 +47,7 @@ jobs:
         run: npm run test:e2e
         working-directory: ProjetoMestreFinal
         env:
-          PORT: 3001
+          PORT: 3000
 
     
   
