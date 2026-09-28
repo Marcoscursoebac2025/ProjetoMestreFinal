@@ -1,4 +1,4 @@
-name: aidicionar_item-CI
+name: adicionar_item-CI
 
 on:
   push:
@@ -6,40 +6,46 @@ on:
   pull_request:
     branches: [ main ]
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout do ProjetoMestreFinal (este repo)
       - name: Checkout ProjetoMestreFinal
         uses: actions/checkout@v3
 
-      - name: Clonar hub-de-leitura-integrado
-        run: |
-          cd ..
-          git clone https://github.com/fabioaraujoqa/hub-de-leitura.git hub-de-leitura-integrado
-
-      - name: Instalar dependências do hub-de-leitura-integrado
-        run: |
-          cd ../hub-de-leitura-integrado
-          npm ci
-
-      - name: Instalar dependências do ProjetoMestreFinal
-        run: |
-          cd ../ProjetoMestreFinal
-          npm ci
+      # Checkout do hub-de-leitura-integrado (repo separado)
+      - name: Checkout hub-de-leitura-integrado
+        uses: actions/checkout@v3
+        with:
+          repository: fabioaraujoqa/hub-de-leitura
+          path: hub-de-leitura-integrado
 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.18.0'
 
+      - name: Instalar dependências do hub-de-leitura-integrado
+        run: npm ci
+        working-directory: hub-de-leitura-integrado
+
+      - name: Instalar dependências do ProjetoMestreFinal
+        run: npm ci
+        working-directory: ProjetoMestreFinal
+
+      - name: Iniciar servidor principal
+        run: |
+          nohup node src/app.js &
+          sleep 5
+        working-directory: hub-de-leitura-integrado
+
       - name: Rodar testes E2E
         run: npm run test:e2e
+        working-directory: ProjetoMestreFinal
         env:
           PORT: 3001
-
 
     
   
