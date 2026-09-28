@@ -29,3 +29,14 @@ Cypress.Commands.add('getAlert', (text) => {
   cy.get('#global-alert-container', { timeout: 8000 }).should('contain', text)
 })
 
+Cypress.Commands.add('login', (email, password) => {
+  cy.request('POST', '/api/login', {
+    email: 'user1_ebac@hotmail.com',
+    password: 'senha123'
+  }).then((resp) => {
+    cy.window().then((win) => {
+      win.localStorage.setItem('token', resp.body.token);
+    });
+  });
+});
+
