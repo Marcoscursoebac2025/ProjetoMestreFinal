@@ -39,7 +39,7 @@ jobs:
 
       - name: Iniciar servidor principal
         run: |
-          nohup node cypress/server.js &
+          nohup node src/server.js &
           sleep 5
         working-directory: hub-de-leitura-integrado
 
