@@ -1,8 +1,9 @@
 ///<reference types="cypress"/>
 
 beforeEach(() => {
-  cy.login();
   
+  cy.login();
+
   cy.intercept('GET', '**/api/books*').as('carregarLivros')
 
   cy.visit('/catalog.html')
