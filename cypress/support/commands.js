@@ -29,14 +29,14 @@ Cypress.Commands.add('getAlert', (text) => {
   cy.get('#global-alert-container', { timeout: 8000 }).should('contain', text)
 })
 
-Cypress.Commands.add('login', (email, password) => {
-  cy.request('POST', '/api/login', {
-    email: 'user1_ebac@hotmail.com',
-    password: 'senha123'
-  }).then((resp) => {
-    cy.window().then((win) => {
-      win.localStorage.setItem('token', resp.body.token);
-    });
-  });
-});
+Cypress.Commands.add('login', (email, senha) => { 
+    cy.visit('login.html')
+    cy.get('#email').type(email, {log: false})
+    cy.get('#password').type(senha, {log: false})
+    cy.get('#login-btn').click()
+    cy.get('#alert-container').should('contain', 'Login realizado com sucesso!')
+    cy.url().should('include', 'dashboard') 
+
+ });
+
 
