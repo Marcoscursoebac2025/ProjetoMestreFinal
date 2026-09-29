@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
   "start": "node hub-de-leitura-integrado/src/server.js",
+  "start-local": "nohup node hub-de-leitura-integrado/src/server.js &",
   "cy:run": "cypress run --spec cypress/e2e/adicionar_item.cy.js",
   "test:e2e": "start-server-and-test start http://localhost:$PORT cy:run"
   },
