@@ -29,13 +29,6 @@ Cypress.Commands.add('getAlert', (text) => {
   cy.get('#global-alert-container', { timeout: 8000 }).should('contain', text)
 })
 
-Cypress.Commands.add('login', (email, senha) => { 
-    cy.visit('login.html')
-    cy.get('#email').type(email, {log: false})
-    cy.get('#password').type(senha, {log: false})
-    cy.get('#login-btn').click()
-    cy.url().should('include', 'dashboard') 
 
- });
 
 

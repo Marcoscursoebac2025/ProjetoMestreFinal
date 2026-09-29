@@ -2,8 +2,6 @@
 
 beforeEach(() => {
   
-  cy.login('user1_ebac@hotmail.com', 'senha123')
-
   cy.intercept('GET', '**/api/books*').as('carregarLivros')
 
   cy.visit('/catalog.html')
