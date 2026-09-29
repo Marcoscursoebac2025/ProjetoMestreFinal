@@ -36,7 +36,10 @@ jobs:
       - name: Instalar dependências das provas
         run: npm ci
         working-directory: ProjetoMestreFinal
-
+      - name: Verificar estructura del servidor
+        run: ls -R
+        working-directory: hub-de-leitura-integrado
+ 
       - name: Iniciar servidor principal
         run: |
           nohup node src/server.js &
