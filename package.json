@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
   "cy:run": "cypress run --spec cypress/e2e/adicionar_item.cy.js",
-  "test:e2e": "npm run cy:run"
+  "test:e2e": "cypress run --browser edge",
+  "test": "npx cypress run"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "cypress": "^15.19.0"
   },
   "devDependencies": {
+    "allure-cypress": "^3.13.0",
     "chai": "^6.2.2",
     "http-server": "^14.1.1",
     "start-server-and-test": "^3.0.12",
