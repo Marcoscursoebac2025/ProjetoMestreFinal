@@ -36,6 +36,7 @@ describe('Funcionalidade: adicionar item', () => {
   it('deve clicar em tudos os botoes adicionar a cesta', () => {
     cy.get('.btn-primary').click({ multiple: true })
     cy.getAlert('O Alquimista')
+    
   });
 
 })
