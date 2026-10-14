@@ -48,17 +48,7 @@ jobs:
         working-directory: ProjetoMestreFinal
         env:
           PORT: 3000
-      - name: Generar reporte Allure
-        run: |
-          npm run allure:generate || true
-          npm run allure:report || true
-
-      - name: Subir reporte Allure como artefacto
-        uses: actions/upload-artifact@v3
-        with:
-          name: allure-report
-          path: ProjetoMestreFinal/allure-report
-          path: allure-report   
+     
 
     
   
