@@ -1,8 +1,9 @@
 ///<reference types="cypress"/>
 
 beforeEach(() => {
-
-cy.visit('/login.html')
+  cy.intercept('POST', '**/api/login').as('login')
+  cy.visit('/login.html')
+ 
 
 });
 
