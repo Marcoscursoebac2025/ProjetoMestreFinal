@@ -43,12 +43,6 @@ jobs:
           sleep 5
         working-directory: hub-de-leitura-integrado
 
-      - name: Verificar usuario de prueba
-        run: |
-           echo "Buscando usuario..."
-            grep -R "user2_ebac@hotmail.com" 
-         working-directory: hub-de-leitura-integrado
-
       - name: Rodar testes E2E
         run: npm run test:e2e
         working-directory: ProjetoMestreFinal
