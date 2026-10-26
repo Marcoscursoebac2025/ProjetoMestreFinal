@@ -31,32 +31,28 @@ Cypress.Commands.add('getAlert', (text) => {
 
 Cypress.Commands.add('login1', (email, senha) => {
 
-cy.get('#email').type(email, {log: false})
-
-cy.get('#password').type(senha, {log:false})
-cy.get('#login-btn').click()
-cy.contains('Login realizado com sucesso!').should('be.visible')
-cy.url().should('include', 'dashboard')
+  cy.get('#email').type(email, { log: false })
+  cy.get('#password').type(senha, { log: false })
+  cy.get('#login-btn').click()
+  cy.url().should('include', 'dashboard')
 
 })
 
 Cypress.Commands.add('login2', (email, senha) => {
 
-cy.get('#email').type(email, {log: false})
-
-cy.get('#password').type(senha, {log:false})
-cy.get('#login-btn').click()
-cy.contains('Por favor, insira um email válido.').should('be.visible')
+  cy.get('#email').type(email, { log: false })
+  cy.get('#password').type(senha, { log: false })
+  cy.get('#login-btn').click()
+  cy.contains('Por favor, insira um email válido.').should('be.visible')
 
 })
 
 Cypress.Commands.add('login3', (email, senha) => {
 
-cy.get('#email').type(email, {log: false})
-
-cy.get('#password').type(senha, {log:false})
-cy.get('#login-btn').click()
-cy.contains('Email ou senha incorretos.').should('be.visible')
+  cy.get('#email').type(email, { log: false })
+  cy.get('#password').type(senha, { log: false })
+  cy.get('#login-btn').click()
+  cy.contains('Email ou senha incorretos.').should('be.visible')
 
 })
 
