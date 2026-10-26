@@ -2,7 +2,7 @@
 
 beforeEach(() => {
 
-  cy.visit('/login.html')
+cy.visit('/login.html')
 
 });
 
