@@ -30,10 +30,11 @@ Cypress.Commands.add('getAlert', (text) => {
 })
 
 Cypress.Commands.add('login1', (email, senha) => {
-
+  cy.intercept('POST', '**/api/login').as('login')
   cy.get('#email').type(email, { log: false })
   cy.get('#password').type(senha, { log: false })
   cy.get('#login-btn').click()
+  cy.wait('@login').its('response.statusCode').should('eq', 200)
   cy.contains('Login realizado com sucesso!').should('be.visible')
   cy.url().should('include', 'dashboard')
 
