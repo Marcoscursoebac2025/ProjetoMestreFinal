@@ -46,7 +46,7 @@ jobs:
       - name: Verificar usuario de prueba
         run: |
            echo "Buscando usuario..."
-            grep -R "user2_ebac@hotmail.com" . || echo "Usuario no encontrado"
+            grep -R "user2_ebac@hotmail.com" 
          working-directory: hub-de-leitura-integrado
 
       - name: Rodar testes E2E
