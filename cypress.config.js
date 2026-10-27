@@ -1,5 +1,6 @@
 const { defineConfig } = require('cypress');
 const { allureCypress } = require('allure-cypress/reporter');
+const { faker } = require('@faker-js/faker');
 
 module.exports = defineConfig({
   e2e: {
