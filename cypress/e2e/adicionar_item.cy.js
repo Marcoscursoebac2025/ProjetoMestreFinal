@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
 
-beforeEach(() => {
+beforeEach(() =>{
   
   cy.intercept('GET', '**/api/books*').as('carregarLivros')
 
