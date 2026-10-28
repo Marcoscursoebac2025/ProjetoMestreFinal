@@ -1,7 +1,7 @@
 ///<reference types="cypress"/>
 
-beforeEach(() =>{
-  
+beforeEach(() => {
+
   cy.intercept('GET', '**/api/books*').as('carregarLivros')
 
   cy.visit('/catalog.html')
@@ -15,6 +15,10 @@ beforeEach(() =>{
 
 });
 
+afterEach(() => {
+  cy.screenshot
+
+});
 
 describe('Funcionalidade: adicionar item', () => {
   it('deve clicar no primeiro botao adicionar a cesta', () => {
@@ -36,7 +40,7 @@ describe('Funcionalidade: adicionar item', () => {
   it('deve clicar em tudos os botoes adicionar a cesta', () => {
     cy.get('.btn-primary').click({ multiple: true })
     cy.getAlert('O Alquimista')
-    
+
   });
 
 })

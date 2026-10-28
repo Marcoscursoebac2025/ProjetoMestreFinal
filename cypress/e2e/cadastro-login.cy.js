@@ -1,6 +1,10 @@
 ///<reference types="cypress"/>
 import { faker } from '@faker-js/faker';
 
+afterEach(() => {
+  cy.screenshot
+});
+
 describe('funcionalidade: cadastro-login', () => {
 
   it('Deve fazer cadastro e login com sucesso', () => {

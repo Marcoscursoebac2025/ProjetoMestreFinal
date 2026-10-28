@@ -11,8 +11,11 @@ beforeEach(() => {
         .find('div')
         .should('have.length.greaterThan', 0)
         .and('be.visible')
-
 });
+afterEach(() => {
+    cy.screenshot
+});
+
 describe('Funcionalidade: remover_item', () => {
     it('deve remover item do carrinho com sucesso', () => {
 

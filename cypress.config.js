@@ -14,6 +14,8 @@ module.exports = defineConfig({
     },
     defaultCommandTimeout: 10000,
     baseUrl: "http://localhost:3000",
+    projectId: "btjvyg",
+    video: true,
     specPattern: "cypress/e2e/**/*.cy.js"
   }
 });
